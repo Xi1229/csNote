@@ -22,12 +22,32 @@ daily task(2024.09.18)
 daily task(2024.09.19)
 
 1. working
-   - electric fence: button style and switching function;
+   - electric fence: button style and switching function; half done
 2. self-study
-   - leetcode 2  
-   - data structure and algorithm 2.9-3.3
-   - learning react: basic grammar(till installing) 
+   - leetcode 2   done
+   - data structure and algorithm 2.9-3.3    done
+   - learning react: basic grammar(till installing)  not finished
+   - learning vue source code   not finshed
+   - second check today's study;  not start
+   - English: read and listen to a passage; done
+3. why not finished
+   - working thins seems more complicated than I thought.
+   - It seems that I need more time to study.
+     - doing things with a plan;
+     - squeeze at least an hour and half hours to learn(one for source code and half for check)
+     - go to bed at 10:00; sleep at 10:30; get up at 6:00; study English(reading, listening, having some tests)
+
+
+
+daily task(2024.09.20)
+
+1. working
+   - electric fence:switching function done;
+   - electric fence: draw rectangle and send data to backend
+2. self-study
+   - leetcode 2
+   - data structure and algorithm 3.4-3.8
    - learning vue source code
-   - second check today's study;  
-   - English: read and listen to a passage;
+   - second check today's study;
+   - English: read and listen to a passage; 
 3. why not finished
