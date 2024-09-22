@@ -43,11 +43,33 @@ daily task(2024.09.20)
 
 1. working
    - electric fence:switching function done;
-   - electric fence: draw rectangle and send data to backend
+   - electric fence: draw rectangle and send data to backend   done
 2. self-study
-   - leetcode 2
-   - data structure and algorithm 3.4-3.8
-   - learning vue source code
-   - second check today's study;
-   - English: read and listen to a passage; 
+   - leetcode 2   not start
+   - data structure and algorithm 3.4-3.8   unfinished
+   - learning vue source code    not start
+   - second check today's study;  not start
+   - English: read and listen to a passage;  not start
+3. why not finished
+   - I didn't expected that switching function would take so much time;
+   - replace battery at midnight. So get up late in Sat. =^=
+   - the part of data structure and algorithm has more information than before. thus , it takes much more time to study;
+     - fighting! Give some stress but not too much~
+
+
+
+daily task(2024.09.21)
+
+No working and studying today.
+
+
+
+daily task(2024.09.22)
+
+1. working 
+   - Today is Sunday. So no working today!
+2. self-study
+   - Learning react (start a project);
+   - learning Vue source code;
+   - English: reading and listening;
 3. why not finished
