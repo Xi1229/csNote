@@ -82,16 +82,34 @@ daily task(2024.09.23)
 
 1. working 
 
-   - Fence list and delete function;
+   - Fence list and delete function; done；
 
 2. self-study
 
    - leetcode 2
-   - data structure and algorithm 3.7 - 3.9
-   - Learning react (start a project);
+   - data structure and algorithm 3.7 - 3.9   done
+   - Learning react (start a project); 
    - learning Vue source code;
    - English: reading and listening;
 
 3. why not finished
 
-   
+
+
+
+daily task(2024.09.24)
+
+1. working 
+
+   - fix the problem of delete function；
+
+2. self-study
+
+   - leetcode 2
+   - data structure and algorithm 3.10 - 3.16   
+   - Learning react (start a project);   done
+   - learning Vue source code;
+   - English: reading and listening;
+
+3. why not finished
+
