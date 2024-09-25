@@ -101,15 +101,30 @@ daily task(2024.09.24)
 
 1. working 
 
-   - fix the problem of delete function；
+   - fix the problem of delete function；done
 
 2. self-study
 
-   - leetcode 2
-   - data structure and algorithm 3.10 - 3.16   
+   - leetcode 2 unstart
+   - data structure and algorithm 3.10 - 3.16   not finished
    - Learning react (start a project);   done
-   - learning Vue source code;
-   - English: reading and listening;
+   - learning Vue source code; done
+   - English: reading and listening; not start
 
+3. why not finished
+   - The task of data structure and algorithm seems too much for me.
+   - The tasks of night Learning should be less;
+
+
+
+
+daily task(2024.09.25)
+
+1. working
+   - display fence on the screen;
+2. self-study
+   - leetcode 2
+   - data structure and algorithm  3.13-3.16 
+   - learning 
 3. why not finished
 
