@@ -121,10 +121,29 @@ daily task(2024.09.24)
 daily task(2024.09.25)
 
 1. working
-   - display fence on the screen;
+   - display fence on the screen;  not start
 2. self-study
-   - leetcode 2
-   - data structure and algorithm  3.13-3.16 
-   - learning 
+   - leetcode 2 not start
+   - data structure and algorithm  3.13-3.16 done
+   - learning Vue source code done;
+   - English not start
+3. why not finished
+   - There are some problems of App.
+   - Deeply involved into App ==
+   - Should write leetcode first
+   - now add front end basic knowledge.
+
+
+
+
+daily task(2024.09.26)
+
+1. working
+   - display fence on the screen and its control function
+2. self-study
+   - leetcode 2   done
+   - find a website of front end basic knowledge  done
+   - learn front end basic knowledge  half HTML 
+   - data structure and algorithm 4.3-4.7
 3. why not finished
 
