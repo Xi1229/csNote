@@ -139,11 +139,27 @@ daily task(2024.09.25)
 daily task(2024.09.26)
 
 1. working
-   - display fence on the screen and its control function
+   - display fence on the screen and its control function half done
 2. self-study
    - leetcode 2   done
    - find a website of front end basic knowledge  done
-   - learn front end basic knowledge  half HTML 
-   - data structure and algorithm 4.3-4.7
+   - learn front end basic knowledge  half HTML done
+   - data structure and algorithm 4.3-4.7 not start
 3. why not finished
+   - talk too much
+
+
+
+
+daily task(2024.09.27)
+
+1. working
+   - the control function of displaying fence on the screen
+2. self-study
+   - leetcode 2  done
+   - learn front end basic knowledge half HTML  done
+   - data structure and algorithm 4.3-4.7
+   - make a pan for learning English
+3. why not finished
+   - 
 
