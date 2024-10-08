@@ -1,4 +1,4 @@
-daily task(2024.09.18)
+#### daily task(2024.09.18)
 
 1. working
    - debugging the image-uploading function of the mobile    done
@@ -19,7 +19,7 @@ daily task(2024.09.18)
 
 
 
-daily task(2024.09.19)
+#### daily task(2024.09.19)
 
 1. working
    - electric fence: button style and switching function; half done
@@ -39,7 +39,7 @@ daily task(2024.09.19)
 
 
 
-daily task(2024.09.20)
+#### daily task(2024.09.20)
 
 1. working
    - electric fence:switching function done;
@@ -58,13 +58,13 @@ daily task(2024.09.20)
 
 
 
-daily task(2024.09.21)
+#### daily task(2024.09.21)
 
 No working and studying today.
 
 
 
-daily task(2024.09.22)
+#### daily task(2024.09.22)
 
 1. working 
    - Today is Sunday. So no working today!
@@ -78,7 +78,7 @@ daily task(2024.09.22)
 
 
 
-daily task(2024.09.23)
+#### daily task(2024.09.23)
 
 1. working 
 
@@ -96,8 +96,7 @@ daily task(2024.09.23)
 
 
 
-
-daily task(2024.09.24)
+#### daily task(2024.09.24)
 
 1. working 
 
@@ -117,8 +116,7 @@ daily task(2024.09.24)
 
 
 
-
-daily task(2024.09.25)
+#### daily task(2024.09.25)
 
 1. working
    - display fence on the screen;  not start
@@ -135,8 +133,7 @@ daily task(2024.09.25)
 
 
 
-
-daily task(2024.09.26)
+#### daily task(2024.09.26)
 
 1. working
    - display fence on the screen and its control function half done
@@ -150,8 +147,7 @@ daily task(2024.09.26)
 
 
 
-
-daily task(2024.09.27)
+#### daily task(2024.09.27)
 
 1. working
    - the control function of displaying fence on the screen  done
@@ -166,14 +162,28 @@ daily task(2024.09.27)
 
 
 
-daily task(2024.09.29)
+#### daily task(2024.09.29)
 
 1. working
-   - fix the bug of the screen;
+   - fix the bug of the screen; done
 2. self-study
    - leetcode 2  done;
    - data structure and algorithm 4.3-4.7  done;
    - review the HTML part  done
-   - make a pan for learning English
+   - make a pan for learning English not start
 3. why not finished
+   - prepare to go home
 
+
+
+
+daily task(2024.10.08)
+
+1. working
+   - display of the splash screen and login screen; done
+   - fix some bugs done;
+2. self-study
+   - leetcode 2; done(实现strStr中的KMP 算法难，需要经常回顾)
+   - data structure and algorithm 4.8-4.9
+   - English learning plan;
+3. why not finished
