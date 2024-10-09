@@ -176,14 +176,28 @@ No working and studying today.
 
 
 
-
-daily task(2024.10.08)
+#### daily task(2024.10.08)
 
 1. working
    - display of the splash screen and login screen; done
    - fix some bugs done;
 2. self-study
    - leetcode 2; done(实现strStr中的KMP 算法难，需要经常回顾)
-   - data structure and algorithm 4.8-4.9
-   - English learning plan;
+   - data structure and algorithm 4.8-4.9 unfinished
+   - English learning plan; not start
+3. why not finished
+   - one of leetcode is so difficult that I spent a lot of time;
+
+
+
+daily task(2024.10.09)
+
+1. working
+   - secondary encapsulation of axios
+2. self-study
+   - figure out the problem of KMP done(需要多多复习)
+   - leetcode 2 done
+   - data structure and algorithm 4.9-4.12 done
+   - English learning plan
+   - back-end learning plan
 3. why not finished
