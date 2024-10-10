@@ -190,14 +190,29 @@ No working and studying today.
 
 
 
-daily task(2024.10.09)
+#### daily task(2024.10.09)
 
 1. working
-   - secondary encapsulation of axios
+   - secondary encapsulation of axios  not start
 2. self-study
    - figure out the problem of KMP done(需要多多复习)
    - leetcode 2 done
    - data structure and algorithm 4.9-4.12 done
+   - English learning plan not start
+   - back-end learning plan  not start
+3. why not finished
+   - having another working problem
+
+
+
+daily task(2024.10.10)
+
+1. working
+   - secondary encapsulation of axios done
+   - layout and style of index(background, head and image)
+2. self-study
+   - leetcode 2  done
+   - CSS basic knowledge  done
    - English learning plan
    - back-end learning plan
 3. why not finished
