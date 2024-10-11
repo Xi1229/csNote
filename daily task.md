@@ -205,14 +205,29 @@ No working and studying today.
 
 
 
-daily task(2024.10.10)
+#### daily task(2024.10.10)
 
 1. working
-   - secondary encapsulation of axios done
-   - layout and style of index(background, head and image)
+   - secondary encapsulation of axios **done**
+   - layout and style of index(background, head and image) **almost**
 2. self-study
-   - leetcode 2  done
-   - CSS basic knowledge  done
+   - leetcode 2  **done**
+   - CSS basic knowledge  **done**
+   - English learning plan **not start**
+   - back-end learning plan **not start**
+3. why not finished
+   - back home too late, also exercising, cooking and eating  take much time
+
+
+
+#### daily task(2024.10.11)
+
+1. working
+   - the style and layout of head component and bottom tab
+   - fulfill the requirement of the screen   **done**
+2. self-study
+   - back-end learning plan **done**
+   - leetcode 2 **done**
+   - data structure and algorithms 4.13-5.5(5.6)  **done**
    - English learning plan
-   - back-end learning plan
 3. why not finished
