@@ -229,5 +229,18 @@ No working and studying today.
    - back-end learning plan **done**
    - leetcode 2 **done**
    - data structure and algorithms 4.13-5.5(5.6)  **done**
-   - English learning plan
+   - English learning plan  **done**
+3. why not finished
+
+
+
+#### daily task(2024.10.14)
+
+1. working
+   - meet the requirement **done**
+   - the style and layout of alert list **done**
+2. self-study
+   - listening
+   - reading
+   - leetcode 2  **done**
 3. why not finished
