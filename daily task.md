@@ -240,7 +240,23 @@ No working and studying today.
    - meet the requirement **done**
    - the style and layout of alert list **done**
 2. self-study
-   - listening
-   - reading
+   - listening not start
+   - reading not start
    - leetcode 2  **done**
 3. why not finished
+   - feel sleepy after eating too much
+
+
+
+#### daily task(2024.10.15)
+
+1. working
+   - already done yesterday
+2. self-study
+   - leetcode 2  **done**
+   - CSS basic knowledge  **done**
+   - restful api
+   - install go
+   - IELTS
+3. why not finished
+   - 
