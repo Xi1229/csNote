@@ -255,8 +255,26 @@ No working and studying today.
 2. self-study
    - leetcode 2  **done**
    - CSS basic knowledge  **done**
-   - restful api
-   - install go
-   - IELTS
+   - restful api not start
+   - install go **windows done** **mac unfinished**
+   - IELTS  not start
 3. why not finished
-   - 
+   - the part of CSS learning takes too much time;
+   - did not study in home;
+
+
+
+#### daily task(2024.10.16)
+
+1. working
+   - the style and layout of map and bottom tab
+2. self-study
+   - leetcode 1 + the basic knowledge of binary tree  **done**
+   - data structure and algorithms 5.6-5.9
+   - restful api
+   - IELTS
+     - reading
+     - writing
+     - listening
+     - speaking
+3. why not finished
