@@ -267,14 +267,30 @@ No working and studying today.
 #### daily task(2024.10.16)
 
 1. working
-   - the style and layout of map and bottom tab
+   - the style and layout of map and bottom tab **not start**
 2. self-study
    - leetcode 1 + the basic knowledge of binary tree  **done**
-   - data structure and algorithms 5.6-5.9
-   - restful api
-   - IELTS
+   - data structure and algorithms 5.6-5.9 **unfinished**
+   - restful api  **not start**
+   - IELTS  **not start**
      - reading
      - writing
      - listening
      - speaking
+3. why not finished
+   - the learning passion decayed
+   - obsessed with cleaning machine and tennis racket
+   - lack of sleep
+
+
+
+daily task(2024.10.18)
+
+1. working
+   - the style and layout of map and bottom tab  **done**
+2. self-study
+   - leetcode 2
+   - data structure and algorithms 5.7-5.93
+   - restful api
+   - IELTS
 3. why not finished
