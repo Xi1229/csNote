@@ -305,8 +305,24 @@ No working and studying today.
    - already done in 18th Oct.
 2. self-study
    - leetcode 2  **done**
-   - data structure and algorithms 5.7-5.9  
+   - data structure and algorithms 5.7-5.9  **unfinished**
    - the basic knowledge of js 1.1-1.10  **done**
-   - write down the source code
-   - IELTS 
+   - write down the source code  **not start**
+   - IELTS **not start**
+3. why not finished
+   - waste much time on cooking and housework;
+   - well maybe there are only two hours to study at most;
+
+
+
+#### daily task(2024.10.22)
+
+1. working
+   - the components of echarts;
+2. self-study
+   - leetcode 2 **done**
+   - data structure and algorithms 5.7-5.9 
+   - write down the code of what learned yesterday
+   - restful api
+   - IELTS
 3. why not finished
