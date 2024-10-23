@@ -318,11 +318,25 @@ No working and studying today.
 #### daily task(2024.10.22)
 
 1. working
-   - the components of echarts;
+   - the components of echarts; not start
 2. self-study
    - leetcode 2 **done**
-   - data structure and algorithms 5.7-5.9 
-   - write down the code of what learned yesterday
+   - data structure and algorithms 5.7-5.9 **done**
+   - write down the code of what learned yesterday **not start**
+   - restful api **not start**
+   - IELTS **not start**
+3. why not finished
+   - frustrated with KMP algorithm
+
+
+
+#### daily task(2024.10.23)
+
+1. working
+   - the component of echarts; **done**
+2. self-study
+   - leetcode 2  **done**
+   - write down the code of what learned
    - restful api
    - IELTS
 3. why not finished
