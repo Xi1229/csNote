@@ -336,7 +336,22 @@ No working and studying today.
    - the component of echarts; **done**
 2. self-study
    - leetcode 2  **done**
-   - write down the code of what learned
-   - restful api
-   - IELTS
+   - write down the code of what learned **not start**
+   - restful api **unfinished**
+   - IELTS **not start**
+3. why not finished
+   - echarts components take too much time;
+   - the time arrangement at home is not clear. Because cooking and cleaning waste much time. Need to compress time to half an hour or an hour;
+
+
+
+daily task(2024.10.24)
+
+1. working
+   - receive interface data and transfer to echarts;  **done**
+2. self-study
+   - leetcode 2 **done**
+   - write down the code of what learned **done**
+   - restful api ****
+   - IELTS ****
 3. why not finished
