@@ -345,13 +345,30 @@ No working and studying today.
 
 
 
-daily task(2024.10.24)
+#### daily task(2024.10.24)
 
 1. working
    - receive interface data and transfer to echarts;  **done**
 2. self-study
    - leetcode 2 **done**
    - write down the code of what learned **done**
-   - restful api ****
-   - IELTS ****
+   - restful api **half done**
+   - IELTS **not start**
+3. why not finished
+   - because of my irregular schedule, I waste all my weekend. Creeping...
+
+
+
+**daily task(2024.10.28)**
+
+1. working
+   - searching function
+2. self-study
+   - leetcode 2 **done with 4 ^-^**
+   - restful api **done**
+   - the basic knowledge of  js 1.18-2.11
+   - the program of TikTok
+     - investigate the similar programme
+     - make a plan
+   - IELTS
 3. why not finished
