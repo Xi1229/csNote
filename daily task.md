@@ -362,13 +362,30 @@ No working and studying today.
 **daily task(2024.10.28)**
 
 1. working
-   - searching function
+   - searching function  **done**
 2. self-study
    - leetcode 2 **done with 4 ^-^**
    - restful api **done**
-   - the basic knowledge of  js 1.18-2.11
+   - learning go **done**
    - the program of TikTok
-     - investigate the similar programme
-     - make a plan
+     - investigate the similar programme  **done**
+     - make a plan **not start**
+   - IELTS **not start**
+3. why not finished
+   - still do not want to study after work
+   - maybe I should cook, eat and showering earlier.
+
+
+
+daily task(20224.10.29)
+
+1. working
+   - the downloading function  **done**
+2. self-study
+   - leetcode 1+summary **done**
+   - data structure and algorithms 5.7-6.3  **done**
+   - the basic knowledge of  js 1.18-2.11
    - IELTS
+     - reading
+     - speaking
 3. why not finished
