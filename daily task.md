@@ -359,7 +359,7 @@ No working and studying today.
 
 
 
-**daily task(2024.10.28)**
+#### **daily task(2024.10.28)**
 
 1. working
    - searching function  **done**
@@ -377,15 +377,32 @@ No working and studying today.
 
 
 
-daily task(20224.10.29)
+#### **daily task(2024.10.29)**
 
 1. working
    - the downloading function  **done**
 2. self-study
    - leetcode 1+summary **done**
    - data structure and algorithms 5.7-6.3  **done**
-   - the basic knowledge of  js 1.18-2.11
-   - IELTS
+   - the basic knowledge of  js 1.18-2.11 **unfinished**
+   - IELTS **not start**
      - reading
      - speaking
+3. why not finished
+   - always want to playing phone at night -_-
+
+
+
+#### **daily task(2024.10.30)**
+
+1. working
+   - trying 3dTiles  **done**
+   - investigate the auto updating function of app **done**
+2. self-study
+   - leetcode 2  **done**
+   - data structure and algorithms 6.4 **done**
+   - the basic knowledge of  js 1.20-2.7 **done**
+   - IELTS
+     - reading practice 2
+     - listening 课程
 3. why not finished
