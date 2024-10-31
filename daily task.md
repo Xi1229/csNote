@@ -402,7 +402,23 @@ No working and studying today.
    - leetcode 2  **done**
    - data structure and algorithms 6.4 **done**
    - the basic knowledge of  js 1.20-2.7 **done**
-   - IELTS
+   - IELTS   **unfinished**
+     - reading practice 2
+     - listening 课程
+3. why not finished
+   - Eating, cooking, cleaning and showering - _ -
+
+
+
+#### **daily task(2024.10.31)**
+
+1. working
+   - the list of security part  **done**
+2. self-study
+   - leetcode 2 **done**
+   - data structure and algorithms 6.5-6.6(6.7)  **done**
+   - the basic knowledge of  js 2.9-3.3  **done**
+   - IELTS 
      - reading practice 2
      - listening 课程
 3. why not finished
