@@ -418,7 +418,24 @@ No working and studying today.
    - leetcode 2 **done**
    - data structure and algorithms 6.5-6.6(6.7)  **done**
    - the basic knowledge of  js 2.9-3.3  **done**
-   - IELTS 
+   - IELTS  **not start**
+     - reading practice 2
+     - listening 课程
+3. why not finished
+   - my shoulder was paining;
+   - obsessed with a novel. Well, I think I am too bored, so I want something for fun.
+
+
+
+#### daily task(2024.11.1)
+
+1. working
+   - the auto updating of app
+2. self-study
+   - leetcode 2
+   - data structure and algorithms 6.7-6.8
+   - the source code of what I've learned about js
+   - IELTS
      - reading practice 2
      - listening 课程
 3. why not finished
