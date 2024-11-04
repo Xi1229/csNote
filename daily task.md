@@ -430,12 +430,34 @@ No working and studying today.
 #### daily task(2024.11.1)
 
 1. working
+   - the auto updating of app **done**
+2. self-study
+   - leetcode 2  **done**
+   - data structure and algorithms 6.7-6.8 **not start**
+   - the source code of what I've learned about js  **not start**
+   - IELTS  **not start**
+     - reading practice 2
+     - listening 课程
+3. why not finished
+   - tapped into a leetcode;
+   - need to have a balance between study and rest in weekend
+     - cleaning at Friday night
+     - rest and study in weekend
+       - better go to library
+
+
+
+daily task(2024.11.04)
+
+1. working
    - the auto updating of app
 2. self-study
-   - leetcode 2
-   - data structure and algorithms 6.7-6.8
-   - the source code of what I've learned about js
+   - leetcode 2  **done**
+   - data structure and algorithms 6.7-6.8  **done**
    - IELTS
      - reading practice 2
      - listening 课程
 3. why not finished
+4. note
+   - should be familiar with the traversal behaviors of the binary tree;
+   - the source code of what I've learned about js
