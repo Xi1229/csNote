@@ -471,6 +471,22 @@ No working and studying today.
 2. self-study
    - leetcode 2 **done**
    - data structure and algorithms (6.9-6.10 review 6.8) **done**
+   - IELTS **not start**
+     - reading practice 2
+     - listening 课程
+3. why not finished
+
+
+
+
+
+daily task(2024.11.08)
+
+1. working
+   - the layout and style of videoConefence
+2. self-study
+   - leetcode 2  **done**
+   - data structure and algorithms 6.11-6.12 review 6.10
    - IELTS
      - reading practice 2
      - listening 课程
