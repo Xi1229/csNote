@@ -480,13 +480,29 @@ No working and studying today.
 
 
 
-daily task(2024.11.08)
+#### daily task(2024.11.08)
 
 1. working
-   - the layout and style of videoConefence
+   - the layout and style of videoConference unfinished
 2. self-study
    - leetcode 2  **done**
-   - data structure and algorithms 6.11-6.12 review 6.10
+   - data structure and algorithms 6.11-6.12 review 6.10 unfinished
+   - IELTS **not start**
+     - reading practice 2
+     - listening 课程
+3. why not finished
+   - chatting a lot
+   - do not want o study and work
+
+
+
+#### **daily task (2024.11.11)**
+
+1. working
+   - the layout and style of videoConference
+2. self-study
+   - leetcode 2  **done**
+   - data structure and algorithms 6.11-6.12 review 6.10 **unfinshed**
    - IELTS
      - reading practice 2
      - listening 课程
