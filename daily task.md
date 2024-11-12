@@ -503,7 +503,20 @@ No working and studying today.
 2. self-study
    - leetcode 2  **done**
    - data structure and algorithms 6.11-6.12 review 6.10 **unfinshed**
-   - IELTS
+   - IELTS not start
      - reading practice 2
      - listening 课程
+3. why not finished
+   - efficiency decreased, due to the desire of learning decreased.
+
+
+
+daily task(2024.11.12)
+
+1. working
+   - the function of toggling
+2. self-study
+   - leetcode 2 **done**
+   - data structure and algorithms 6.12 remembering noting something to improve the concentration  **done**
+   - js 3.2-3.10
 3. why not finished
