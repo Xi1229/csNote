@@ -523,11 +523,36 @@ No working and studying today.
 
 
 
-daily task(2024.11.19)
+#### daily task(2024.11.19)
 
 1. working
+   - nothing
 2. self- study
    - leetcode 2  **done**
-   - data structure and algorithms 7.1-7.3
+   - data structure and algorithms 7.1-7.3 **unfinished**
+   - js 3.2-3.10 **not start**
+3. why not finished
+   - trapped with the emotion
+
+
+
+#### daily task(2024.11.20)
+
+1. working
+2. self-study
+   - leetcode 2  **done**
+   - data structure and algorithms 7.2.2-7.3 **unfinished**
+   - js 3.2-3.10 **not start**
+3. why not finished
+
+
+
+#### daily task(2024.11.21)
+
+1. working
+   - the component of video conference
+2. self-study
+   - leetcode 2
+   - data structure and algorithms 7.2.2-7.3
    - js 3.2-3.10
 3. why not finished
