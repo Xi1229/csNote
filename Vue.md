@@ -52,4 +52,102 @@ MVP 通过使用 Presenter 来实现对 View 层和 Model 层的解耦。 Presen
 
 把表达式中的值始终当作函数的第一个参数
 
-保存页面的当前状态
+#### 保存页面的当前状态
+
+组件被卸载：**LocalStorage / SessionStorage**和**路由传值**
+
+组件不被卸载：单页面渲染、Vuex和keep-alive
+
+#### 常见的事件修饰符
+
+.stop, .prevent, .capture, .self, .once, .sync
+
+#### v-if、v-show、v-html 的原理
+
+v-if：addIfCondition方法，生成vnode的时候会忽略对应节点，render的时候就不会渲染；
+
+v-show：会生成vnode，render的时候也会渲染成真实节点，只是在render过程中会在节点的属性中修改show属性值，也就是常说的display；
+
+v-html：先移除节点下的所有节点，调用html方法，通过addProp添加innerHTML属性，归根结底还是设置innerHTML为v-html的值。
+
+#### v-if和v-show的区别
+
+手段、编译过程、编译条件、性能消耗、使用条件
+
+#### v-model 是如何实现的，语法糖实际是什么
+
+表单元素：动态绑定input的value指向message，触发事件时动态把message设为目标值。
+
+组件：利用名为 value 的 prop和名为 input 的事件。双亲组件接收子组件通过input事件$emit出来的数据。本质是一个父子组件通信的语法糖，通过prop和$.emit实现。
+
+#### data为什么是一个函数而不是对象
+
+ 对象是引用类型，一次修改会导致其他都变化。vue中组件互不干扰，所以不能写成对象的形式，要写成函数的形式。数据是函数返回值。
+
+#### keep-alive如何实现的，具体缓存什么？
+
+#### $nextTick 原理及作用
+
+nextTick 的核心是利用了如 Promise 、MutationObserver、setImmediate、setTimeout的原生 JavaScript 方法来模拟对应的微/宏任务的实现，本质是为了利用 JavaScript 的这些异步回调任务队列来实现 Vue 框架中自己的异步回调队列。
+
+#### Vue 中给 data 中的对象属性添加一个新的属性时会发生什么？如何解决？
+
+无事发生。。因为在Vue实例创建时，obj.b并未声明，因此就没有被Vue转换为响应式的属性，自然就不会触发视图的更新，这时就需要使用Vue的全局 api **$set()：**
+
+#### Vue中封装数组方法有哪些，如何实现页面更新
+
+push, pop, shift, unshift, splice, sort, reverse
+
+原理：首先获取到这个数组的__ob__，也就是它的Observer对象，如果有新的值，就调用observeArray继续对新的值观察变化（也就是通过`target__proto__ == arrayMethods`来改变了数组实例的型），然后手动调用notify，通知渲染watcher，执行update。
+
+```js
+// 缓存数组原型
+const arrayProto = Array.prototype;
+// 实现 arrayMethods.__proto__ === Array.prototype
+export const arrayMethods = Object.create(arrayProto);
+// 需要进行功能拓展的方法
+const methodsToPatch = [
+  "push",
+  "pop",
+  "shift",
+  "unshift",
+  "splice",
+  "sort",
+  "reverse"
+];
+
+/**
+ * Intercept mutating methods and emit events
+ */
+methodsToPatch.forEach(function(method) {
+  // 缓存原生数组方法
+  const original = arrayProto[method];
+  def(arrayMethods, method, function mutator(...args) {
+    // 执行并缓存原生数组功能（主要是确保this作为上下文）
+    const result = original.apply(this, args);
+    // 响应式处理
+    const ob = this.__ob__;
+    let inserted;
+    switch (method) {
+    // push、unshift会新增索引，所以要手动observer
+      case "push":
+      case "unshift":
+        inserted = args;
+        break;
+      // splice方法，如果传入了第三个参数，也会有索引加入，也要手动observer。
+      case "splice":
+        inserted = args.slice(2);
+        break;
+    }
+    // 
+    if (inserted) ob.observeArray(inserted);// 获取插入的值，并设置响应式监听
+    // notify change
+    ob.dep.notify();// 通知依赖更新
+    // 返回原生数组方法的执行结果
+    return result;
+  });
+});
+```
+
+#### Vue 单页应用与多页应用的区别
+
