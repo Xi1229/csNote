@@ -151,3 +151,24 @@ methodsToPatch.forEach(function(method) {
 
 #### Vue 单页应用与多页应用的区别
 
+SPA单页面应用（SinglePage Web Application）：一个主页面+许多模块组件
+
+MPA多页面应用 （MultiPage Application）：许多完整的页面
+
+#### Vue template 到 render 的过程
+
+template -> ast -> render函数
+
+AST元素节点总共三种类型：type为1表示普通元素、2为表达式、3为纯文本
+
+具体过程：
+
+1. 调用parse方法将template转为ast（抽象语法树）。过程：利用正则表达式顺序解析模板，当解析到开始标签、闭合标签、文本的时候都会分别执行对应的 回调函数，来达到构造AST树的目的。
+
+2. 优化静态节点。生成的DOM永远不会改变
+
+3. 生成代码：generate将ast抽象语法树编译成 render字符串并将静态部分放到 staticRenderFns 中，最后通过 `new Function(`` render``)` 生成render函数。
+
+#### Vue data 中某一个属性的值发生改变后，视图会立即同步执行重新渲染吗？
+
+不会立即同步执行重新渲染。
