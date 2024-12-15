@@ -18,7 +18,7 @@ compile：将模板解析为render函数，编译器为渲染函数创建了一�
 
 dep：每个响应式属性都对应一个 `Dep` 实例。管理依赖，记录哪些 `Watcher` 依赖了某个数据属性，并在数据变化时通知这些 `Watcher` 进行更新
 
-总结：observer监听劫持，setter被触发便通知dep，再notiy给watcher，再更新到视图。compile编译成渲染函数，创建watcher，访问数据触发getter，检查是否有活跃的watcher，添加到dep依赖。属性变化时，dep通知watcher更新
+总结：observer监听劫持，setter被触发便通知dep，再notiy给watcher，再更新到视图。compile编译成渲染函数，创建watcher，访问数据触发getter，调用dep.depend收集依赖，depend方法里调用Dep.target.addDep(this)确保当前的Dep被当前的watcher收集到，Watcher.addDep(dep) 完成依赖的双向绑定，将watcher添加到dep依赖，将当前dep添加到watcher依赖列表。属性变化时，dep通知watcher更新
 
 #### Object.defineProperty()数据劫持的缺点
 
@@ -171,4 +171,86 @@ AST元素节点总共三种类型：type为1表示普通元素、2为表达式�
 
 #### Vue data 中某一个属性的值发生改变后，视图会立即同步执行重新渲染吗？
 
-不会立即同步执行重新渲染。
+不会立即同步执行重新渲染，而是进行异步更新机制（将更新任务放入一个队列中，延迟到下一次事件循环时统一执行）
+
+原因：避免重复计算，合并多个更新。
+
+实现细节：
+
+1. 数据变化，触发getter/setter；
+2. setter通知依赖的dep，将相关的watcher推入更新队列。
+3. vue开启一个队列来手机所有的watcher，并去重，保证每个watcher只执行一次。
+4. 在下一个事件循环（tick）中，Vue 使用 nextTick 刷新队列，执行 watcher 的 update 方法，完成视图更新。
+
+**什么时候判定watcher收集完成？**
+
+1. Watcher 收集依赖的结束时机是 **渲染函数或计算属性逻辑执行完成**。
+
+2. Vue 通过设置和清除 Dep.target 确保依赖收集的准确性。
+
+3. 每次收集之前，Vue 会清理旧的依赖，避免动态依赖带来的问题。
+
+Vue 在执行渲染函数（或计算属性）时，会逐一访问这些响应式属性。当渲染函数或计算属性执行完毕时，Vue 会将 Dep.target 设置为 null。此时，Watcher 的收集工作完成，后续对响应式属性的访问不会再被记录到该 Watcher 中，避免无关的依赖被错误收集。
+
+#### mixin和extends的覆盖逻辑
+
+都是通过mergeOptions方法合并。
+
+mixins接收混入对象的数组，混入对象合并到一种选项中。
+
+extends接收一个对象或者构造函数
+
+共同点：先按顺序执行mixin中的生命周期钩子/watch，再执行组件钩子/watch。
+
+**mergeOptions的执行过程**
+
+1. 规范化选项（normalizeProps、normalizelnject、normalizeDirectives)
+
+2. 对未合并的选项，进行判断
+
+   
+
+3. 合并处理。根据一个通用 Vue 实例所包含的选项进行分类逐一判断合并，如 props、data、 methods、watch、computed、生命周期等，将合并结果存储在新定义的 options 对象里。
+
+4. 返回合并的options
+
+#### 描述vue自定义指令（directive）
+
+一般对dom元素进行底层操作时会用，尽量只操作dom展示，不修改内部的值。如果要修改，需要使用keydown事件。
+
+**全局定义、局部定义；**
+
+**钩子函数**（bind、inSerted、update、ComponentUpdate、unbind）
+
+**钩子函数参数**【el、binding指令核心对象（name、value、oldValue、expression、arg、modifers）vnode、oldVnode】
+
+​	•	expression：字符串形式的绑定表达式，比如 v-bind:prop="value" 中的 "value".
+
+​	•	arg：字符串形式的指令参数，比如 v-bind:prop.sync 中的 "sync".
+
+​	•	modifiers：一个对象，包含所有的修饰符。修饰符是在指令名后加上点号（.）表示的，如 .stop 或 .prevent。
+
+使用场景：鼠标聚焦、下拉菜单、相对时间转换，滚动动画、实现图片懒加载、集成第三方插件
+
+#### 子组件可以直接改变双亲组件的数据
+
+不可以。因为单向数据流。
+
+解决方案：通过$emit派发自定义事件，双亲组件接收并修改
+
+#### Vue如何收集依赖？
+
+data初始化时（即将普通对象变为响应式对象）会进行依赖📱：实例化Dep，get函数通过dep.depend进行依赖收集
+
+1. Dep是一个class， static target指向全局唯一一个wathcer，保证了同一时间全局只有一个 watcher 被计算（因为是一个单线程、同步的过程），另一个属性 subs 则是一个 Watcher 的数组，所以 Dep 实际上就是对 Watcher 的管理。
+
+watcher一般都是响应式数据被模版、computed或watch使用时，会有对应的watcher。但是每一个带有getter/setter的响应式数据都有dep。但没有watcher的响应式数据的dep没有订阅者（空依赖）。
+
+**过程**
+
+1. 初始化，调用defineReactive，其中getter收集依赖。
+2. 到mount过程，实例化watcher，执行watcher的this.get()
+3. get调用pushTarget ，把 Dep.target 赋值为当前的 watcher。this.getter.call（vm，vm），这里的 getter 会执行 vm._render() 方法，在这个过程中便会触发数据对象的 getter。
+4. 这时，每个对象值的 getter 都持有一个 dep，在触发 getter 的时候会调用 dep.depend() 、执行Dep.target.addDep(this)，执行addDep，到dep.addSub
+
+注意：在 vm._render() 过程中，会触发所有数据的 getter
