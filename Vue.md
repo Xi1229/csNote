@@ -348,4 +348,12 @@ delete 只是被删除的元素变成了 empty/undefined；`Vue.delete` 直接�
 
 ### SSR
 
-服务端渲染，将Vue在客户端把标签渲染成HTML的工作
+服务端渲染，将把标签渲染成HTML，返回html给客户端
+
+优势：SEO、首屏加载速度快；
+
+缺点：
+
+- 服务端渲染只支持beforeCreate和created两个钩子；
+- 当需要一些外部扩展库时需要特殊处理，服务端渲染应用程序也需要处于Node.js的运行环境；
+- 更多的服务端负载。
