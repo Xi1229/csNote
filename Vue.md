@@ -357,3 +357,19 @@ delete 只是被删除的元素变成了 empty/undefined；`Vue.delete` 直接�
 - 服务端渲染只支持beforeCreate和created两个钩子；
 - 当需要一些外部扩展库时需要特殊处理，服务端渲染应用程序也需要处于Node.js的运行环境；
 - 更多的服务端负载。
+
+### Vue的性能优化
+
+#### 编码阶段
+
+尽量减少data中的数据，data中的数据会增加getter和setter，会收集对应的watcher
+
+v-if和v-for不能连用
+
+如果需要使用v-for给每项元素绑定事件时，使用事件代理
+
+SPA页面采用keep-alive缓存组件
+
+在更多情况下，使用v-if代替v-show
+
+key保证唯一
