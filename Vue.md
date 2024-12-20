@@ -14,7 +14,9 @@ Object.defineProperty()劫持各属性setter，getter，在数据变动时发布
 
 observer：劫持监听data、响应式数据和数组操作
 
-compile：将模板解析为render函数，编译器为渲染函数创建了一个渲染 Watcher。Watcher 在执行渲染函数时，渲染函数中访问响应式数据时，会触发响应式数据的 `getter`。在 `getter` 中，Vue 会检查当前是否有活跃的 `Watcher`（即 `Dep.target` 是否不为 `null`）。如果存在，调用 `Dep.addDep()`，将当前 `Watcher` 添加到 `Dep` 的依赖列表中。`Watcher` 被记录在 `Dep` 中，成为该属性的依赖。当属性发生变化时，`Dep` 可以通知所有依赖（`Watcher`）更新。
+compile：将模板解析为render函数，编译器为渲染函数创建了一个渲染 Watcher。Watcher 在执行渲染函数时，渲染函数中访问响应式数据时，会触发响应式数据的 `getter`。在 `getter` 中，Vue 会检查当前是否有活跃的 `Watcher`（即 `Dep.target` 是否不为 `null`）。如果存在，调用 `D`
+
+`ep.addDep()`，将当前 `Watcher` 添加到 `Dep` 的依赖列表中。`Watcher` 被记录在 `Dep` 中，成为该属性的依赖。当属性发生变化时，`Dep` 可以通知所有依赖（`Watcher`）更新。
 
 dep：每个响应式属性都对应一个 `Dep` 实例。管理依赖，记录哪些 `Watcher` 依赖了某个数据属性，并在数据变化时通知这些 `Watcher` 进行更新
 
