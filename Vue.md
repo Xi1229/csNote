@@ -364,14 +364,84 @@ delete 只是被删除的元素变成了 empty/undefined；`Vue.delete` 直接�
 
 #### 编码阶段
 
-尽量减少data中的数据，data中的数据会增加getter和setter，会收集对应的watcher
+- 尽量减少data中的数据，data中的数据会增加getter和setter，会收集对应的watcher
 
-v-if和v-for不能连用
+- v-if和v-for不能连用
 
-如果需要使用v-for给每项元素绑定事件时，使用事件代理
+- 如果需要使用v-for给每项元素绑定事件时，使用事件代理
 
-SPA页面采用keep-alive缓存组件
+- SPA页面采用keep-alive缓存组件
 
-在更多情况下，使用v-if代替v-show
+- 在更多情况下，使用v-if代替v-show
 
-key保证唯一
+- key保证唯一
+- 使用路由懒加载、异步组件
+- 防抖、节流
+- 第三方模块按需导入
+- 长列表滚动到可视区域动态加载
+- 图片懒加载
+
+#### SEO优化
+
+- 预渲染
+  - 使用prerender-spa-plugin在项目构建时生成每个路由的静态HTML文件（适用于小型网站或者部分页面）
+- 服务端渲染SSR
+  - 主要流程：客户端请求HTML页面，服务端渲染HTML发送给浏览器，客户端激活Vue应用
+  - 具体流程
+    - 创建客户端（挂载vue，**entry-client.js**）和服务端入口（渲染vue，**entry-server.js**）
+    - main.js创建工厂函数，以供服务端和客户端共用
+    - server.js创建nodejs服务，处理ssr渲染
+    - 打包配置。创建两个webpck配置文件，用于打包客户端和服务端
+    - 构建命令打包
+    - 部署：客户端代码上传至cdn或静态服务器；服务端在服务器上运行server.js，使用PM2或Docker部署
+  - 页面瞬间可见，提升首屏渲染速度
+  - 客户端和服务端使用相同的路由配置，水合
+
+#### 打包优化
+
+- 压缩代码
+- Tree Shaking/Scope Hoisting
+  - Scope Hoisting：
+    - 静态分析模块，确定依赖关系；合并作用域（多个模块无相互作用）；消除包装；
+    - rollup默认开启；webpack需启用production和optimization.moduleConcatenation
+  - Tree Shaking移除未使用代码
+    - 缺点：动态导入无法工作；有副作用的代码依然会保留。
+- 使用cdn加载第三方模块
+  - HTML中使用script加载
+  - 配置webpack或者CDN
+    - webpack：html-webpack-plugin插件；修改webpack配置文件；在index.html引入；
+    - vite：vite-plugin-cdn-import；修改vite配置文件；在index.html中华使用
+- 多线程打包happypack
+  - happypack是加速webpack打包的工具，通过使用多核CPU将打包任务分发多线程
+  - 原理：
+    - 创建多线程工作池
+    - 主线程与子线程协作
+      - 主线程分发至线程池；线程池处理后返回主线程
+    - 加速构建
+  - webpack5自带thread-loader，减少happypack的依赖
+- splitChunks抽离公共文件
+  - 将重复使用的代码提取至独立的文件
+  - 提升缓存效果
+  - 提高加载速度
+- sourceMap优化
+  - sourceMap是一个将压缩、混淆后的代码与原始代码关联的文件，以便调试压缩后的代码
+  - 生产环境禁用sourcemap
+  - 分离sxourcemap，生成单独.map文件，而不是嵌入js或css，客户端就不必下载sourcemap文件
+
+#### 用户体验
+
+- 骨架屏
+- PWA：渐进式网络应用程序；核心技术（Service Worker、Web App Manifest、HTTPS）
+- 缓存（客户端缓存、服务端缓存）优化、服务端开启gzip压缩；
+  - 客户端缓存
+    - 浏览器缓存（强制本地缓存、协商缓存）
+    - **LocalStorage 和 SessionStorage**
+    - IndexDB：浏览器内建的NoSQL数据库，存储大量结构化数据，适合复杂的客户端应用
+    - PWA的Service Worker拦截网络请求并缓存资源，实现离线功能和资源优化
+  - 服务端缓存
+    - HTTP响应头
+    - 数据库缓存查询：redis
+    - 反向代理
+    - 应用级缓存
+    - CDNs缓存
+
