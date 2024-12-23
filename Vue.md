@@ -445,3 +445,89 @@ delete 只是被删除的元素变成了 empty/undefined；`Vue.delete` 直接�
     - 应用级缓存
     - CDNs缓存
 
+### SPA单页面的优缺点
+
+一次性加载
+
+优点：
+
+- 用户体验好，避免重复渲染
+- 对服务器压力较小
+- 前后端分离
+
+缺点：
+
+- 初次加载耗时；
+- 前进后退路由管理；
+- SEO难度大
+
+### template和jsx的区别
+
+都是render的一种表现形式；
+
+不同：jsx更灵活（灵活使用js表达式；复杂条件或函数；嵌套组件这届传递函数活数组；动态渲染），在复杂组件中更有优势；template更符合视图与逻辑分离的习惯；
+
+vue：
+
+- 在预编译环节中，通过 `vue-template-compiler` 将 `template` 部分编译成 JavaScript 的 `render` 函数，render函数使用createElement生成虚拟dom。
+- babel-plugin-transform-vue-jsx是一个babel插件，可以帮助在vue项目中使用jsx；
+
+react：
+
+本身支持jsx，Babel 插件 `babel-plugin-transform-react-jsx` 转换 JSX 代码成 `React.createElement` 调用。从而生成虚拟dom
+
+### vue初始化页面闪动的问题
+
+在css中加上[v-cloak] {    display: none;}；如果还没解决，就在根元素加上`style="display: none;" :style="{display: 'block'}"`
+
+### extend的作用
+
+创建“扩展构造器”，创建一个子类，继承vue的特性，并增加自定义的配置，通过 `$mount` 方法将其挂载到页面的元素
+
+使用场景：
+
+- 构建动态组件，例如点击生成组件
+- 封装组件，封装通用逻辑；
+
+和vue.component的区别：
+
+**Vue.component** 是全局注册组件的方法；**Vue.extend** 是一个构造函数，它返回一个新的组件构造器（子类）。
+
+### MVVM的优缺点
+
+优点：
+
+- 分离视图view和模型model，降低耦合，提高视图或逻辑的重用性；
+- 提高可测性（ViewModel）
+- 自动更新dom：利用双向绑定
+
+缺点：
+
+- bug难调试：无法判断bug位置
+- model太大，长期持有，不释放内存会造成花费内存；
+- 大型图形应用程序，视图状态较多，ViewModel的构建和维护成本较高
+
+## 生命周期
+
+beforeCreate：还未初始化
+
+ created：实例创建完成，配置的 options配置完成，但是还未渲染挂载到DOM
+
+beforeMount：render函数首次被调用；完成编译模板，把data中的数据和模板生成html 
+
+mounted：el被vm.$el替换，并挂载到实例。具体过程：用编译的html内容替换el属性指向的DOM对象，此过程进行ajax交互
+
+- el是vue实例的一个选项，指定了vue实例将要控制的DOM元素
+
+beforeUpdate：响应式数据更新时调用，但是对应的dom没有被渲染
+
+updated：数据更改后，对应的dom渲染；避免在此期间更改状态，可能会导致更新无限循环；该钩子在服务器端渲染期间不被调用。
+
+beforeDestroy：实例销毁前调用，this仍能获取到实例。
+
+destroyed：实例销毁后。所有东西解绑；该钩子在服务端渲染期间不被调用。
+
+`keep-alive` 独有的生命周期：
+
+- activated：命中缓存渲染后会执行 `activated` 钩子函数
+- deactivated：在切换时不会进行销毁，而是缓存到内存中并执行 `deactivated` 钩子函数
