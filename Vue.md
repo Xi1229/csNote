@@ -517,7 +517,7 @@ beforeMount：render函数首次被调用；完成编译模板，把data中的�
 
 mounted：el被vm.$el替换，并挂载到实例。具体过程：用编译的html内容替换el属性指向的DOM对象，此过程进行ajax交互
 
-- el是vue实例的一个选项，指定了vue实例将要控制的DOM元素
+- el是vue实例的一个选项，指定了vue实例将要控制的DOM元素，由开发者显式指定
 
 beforeUpdate：响应式数据更新时调用，但是对应的dom没有被渲染
 
@@ -531,3 +531,65 @@ destroyed：实例销毁后。所有东西解绑；该钩子在服务端渲染�
 
 - activated：命中缓存渲染后会执行 `activated` 钩子函数
 - deactivated：在切换时不会进行销毁，而是缓存到内存中并执行 `deactivated` 钩子函数
+- 如果一个组件包裹了keep-alive，beforeDestroy 和 destroyed 就不会再被触发了，因为组件不会被真正销毁。当组件被换掉时，会被缓存到内存中、触发 deactivated 生命周期；当组件被切回来时，再去缓存里找这个组件、触发 activated钩子函数。
+
+### vue子组件和父组件的执行顺序
+
+加载渲染过程
+
+1. 父组件 beforeCreate
+2. 父组件 created
+3. 父组件 beforeMount
+4. 子组件 beforeCreate
+5. 子组件 created
+6. 子组件 beforeMount
+7. 子组件 mounted
+8. 父组件 mounted
+
+更新过程
+
+1. 父组件 beforeUpdate
+2. 子组件 beforeUpdate
+3. 子组件 updated
+4. 父组件 updated
+
+销毁过程
+
+1. 父组件 beforeDestroy
+2. 子组件 beforeDestroy
+3. 子组件 destroyed
+4. 父组件 destoryed
+
+### 生命周期请求异步数据
+
+推荐created，原因：
+
+- 更快获取服务端数据，减少页面加载时间，用户体验更好；
+- SSR不支持beforeMount, mounted，放在created有助于一致性
+
+## 组件通信
+
+### props  /  $emit
+
+props：单向，双亲向子组件传递数据
+
+$emit：绑定自定义事件，传递参数给双亲组件；双亲组件通过v-on监听并接收参数；
+
+### eventBus事件总线
+
+应用场景：双亲和子，非双亲和子
+
+步骤：创建事件中心管理组件之间的通信=》组件发送/接收事件
+
+缺点：不适用于大型项目，后期维护难
+
+### 依赖注入（provide/inject）
+
+应用场景：双亲和子组件之间的通信或者层级较深的祖孙组件。
+
+与`data`、`methods`同级
+
+- `provide` 钩子用来发送数据或方法
+- `inject`钩子用来接收数据或方法
+
+注意：注入和依赖提供的属性是非响应式的。
