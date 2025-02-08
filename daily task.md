@@ -556,3 +556,14 @@ No working and studying today.
    - data structure and algorithms 7.2.2-7.3
    - js 3.2-3.10
 3. why not finished
+
+
+
+daily task(2025.02.07)
+
+1. working
+   - api of creating orders **done**
+   - the api of list  **DONE**
+   - sign button and deal button
+2. self-study
+   - 
