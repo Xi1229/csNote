@@ -1,9 +1,11 @@
 #### daily task(2024.09.18)
 
 1. working
-   - debugging the image-uploading function of the mobile    done
-   - electric fence: button style and switching function;   not start
+   
+   debugging the image-uploading function of the mobile    done
 
+   - electric fence: button style and switching function;   not start
+   
 2. self-study
    - leetcode 2  done
    - data structure and algorithm 2.1-2.8 done
@@ -559,7 +561,7 @@ No working and studying today.
 
 
 
-daily task(2025.02.07)
+#### daily task(2025.02.07)
 
 1. working
    - api of creating orders **done**
@@ -567,3 +569,15 @@ daily task(2025.02.07)
    - sign button and deal button
 2. self-study
    - 
+
+
+
+#### daily task(2025.02.23)
+
+1. working
+   - No work today.
+2. self-study
+   - Interview  the question of project detail part1 done
+   - the basic knowledge of vue
+   - write the code of function
+
